@@ -1,9 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portofolio Rosmalinda</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
+        <!-- Ini Header Nav -->
+        <header class="nav-container">
+            <div class="logo-icon">
+                <h2>Flowist</h2>
+            </div>
+            
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#our-profile">Our Profile</a>
+                <a href="#products">Products</a>
+                <a href="#message-us">Message Us</a>
+            </nav>
+        </header>
+        <hr />
+
+    <main>
+        <!-- Ini Home Content -->
+        <section id="home" style="background-color: #da9fb3;">
+            <header>
+                <h1>Hi <span id="userName"></span> Welcome to Flowist</h1>
+            </header>
+            <article>
+                <p>We're delighted to have you here! At Flowist, we bring the beauty of nature 
+                    right to your doorstep. Discover our stunning floral arrangements and let us 
+                    help you celebrate life's special moments with the perfect blooms. Enjoy exploring 
+                    our wide selection of flowers and let us make your day a little brighter.</p>
+                <div class="banner-container">
+                    <div class="banner-item" style="background-image: url(assets/banner1.jpg);"></div>
+                    <div class="banner-item" style="background-image: url(assets/banner2.jpg);"></div>
+                    <div class="banner-controls">
+                        <button id="prevBtn"><</button>
+                        <button id="nextBtn">></button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+        <br />
+        <br />
+
+        <!-- Ini Our Profile Content -->
+        <section id="our-profile" style="background-color: #da9fb3;">
+            <header>
+                <h1>Our Profile</h1>
+            </header>
+            <hr />
+            <article class="profile-content">
+                <div class="profile-item">
+                    <div class="profile-icon"></div>
+                </div>
+
+                <div class="divider">
+                    <h3>Welcome to Flowist, your ultimate destination for all things floral!
+                     At Bloom Haven, we believe that flowers are more than just beautiful decorations; 
+                     they are symbols of love, joy, and life itself. Our passion for flowers drives us 
+                     to provide the finest floral arrangements and exceptional service to our valued 
+                     customers.</h3>
+                </div>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Ini Products Content -->
+        <section id="products">
+            <header>
+                <h1>Products</h1>
+            </header>
+
+            <article class="products-content">
+                <div class="products-item">
+                    <div class="products-icon-1"></div>
+                    <p>Lily</p>
+                </div>
+
+                <div class="products-item">
+                    <div class="products-icon-2"></div>
+                    <p>Roses</p>
+                </div>
+
+                <div class="products-item">
+                    <div class="products-icon-3"></div>
+                    <p>Tulips</p>
+                </div>
+
+                <div class="products-item">
+                    <div class="products-icon-4"></div>
+                    <p>Sunflower</p>
+                </div>
+            </article>
+        </section>
+        <br />
+        <hr />
+
+        <!-- Ini Message Us Content -->
+        <section id="message-us">
+            <header>
+                <h1>Message-Us</h1>
+            </header>
+            <main>
+                <div class="form-container">
+                    <form id="myForm">
+                        <label for="nameInput">Nama:</label>
+                        <input type="text" id="nameInput" name="name">
+                        <span class="error" id="nameError"></span>
+                        
+                        <label for="dob">Tanggal Lahir:</label>
+                        <input type="date" id="dob" name="dob">
+                        <span class="error" id="dobError"></span>
+                        
+                        <label for="gender">Jenis Kelamin:</label>
+                        <select id="gender" name="gender">
+                            <option value="">Pilih</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        <span class="error" id="genderError"></span>
+                        
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <span class="error" id="messageError"></span>
+                        
+                        <button type="button" onclick="validateForm()">Submit</button>
+                    </form>
+                    <div class="result" id="result">
+                        <!-- Hasil validasi akan muncul di sini -->
+                    </div>
+                </div>
+            </main>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Copyright.2024 Design by Rosmalinda </p>
+    </footer>
+    <script src="js/script.js"></script>
     </body>
 </html>
